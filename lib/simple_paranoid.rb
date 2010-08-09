@@ -18,8 +18,6 @@ module SimpleParanoid
       class << self
         alias_method_chain :delete_all, :deleted
       end
-
-      named_scope :not_null, :conditions => "#{table_name}.deleted_at IS NULL"
     end
   end
 
